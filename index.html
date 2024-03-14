@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Inicio de sesion</h3>
+    <!-- EN EL ACTION DIRIGIMOS LA RUTA(BIENVENIDO.PHP)-->
+<form method="POST" action="bienvenido.php">
+    Usuario:<br>
+    <input type="text" name="txtusuario"><br>
+    Password:<br>
+    <input type="text" name="txtpass"><br>
+    <!-- damos un espacio con br -->
+    <br>
+    <!--- CREAMOS BOTON -->
+    <input type="submit" value="Acceder">
+</form>
+<?php
+//pregunta si la variable error tiene un dato
+if(isset($_GET['retornar']))
+{
+  $error=$_GET['retornar'] ;
+  if($error=="incorrecto"){
+    echo "<h4><font color=red>DATOS INGRESADOS INCORRECTOS</font></h4>";
+
+  }
+}
+?>
+</body>
+</html>
